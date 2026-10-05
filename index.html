@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Rural School Transport in the Eastern Cape | SchoolHop Foundation</title>
+<meta name="description" content="SchoolHop Foundation provides safe, reliable and free rural school transport for learners in the Eastern Cape. Sponsor a route or get involved today.">
+<meta name="keywords" content="rural school transport Eastern Cape, sponsor a learner South Africa, school transport NGO, education charity Eastern Cape, safe learner transport">
+<meta name="author" content="SchoolHop Foundation">
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #004d40;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        #hero {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-image {
+            flex: 1;
+        }
+        .hero-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        /* About / Website Project Section */
+        #about {
+            background-color: #ffffff;
+            border: 1px solid #d7e7e4;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        #about h3 {
+            color: #004d40;
+            margin-top: 0;
+        }
+        .project-requirements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .requirement-card {
+            background: #f0f7f5;
+            border-left: 4px solid #80cbc4;
+            border-radius: 6px;
+            padding: 16px;
+        }
+        .requirement-card h4 {
+            color: #004d40;
+            margin: 0 0 6px;
+        }
+        .cta-panel {
+            background: #004d40;
+            color: #fff;
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 24px;
+            text-align: center;
+        }
+        .cta-panel a {
+            display: inline-block;
+            margin-top: 10px;
+            background: #80cbc4;
+            color: #00251a;
+            padding: 10px 18px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .cta-panel a:hover {
+            background: #b2dfdb;
+        }
+        /* Responsive layouts for desktop, tablet and mobile */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            header nav a {
+                display: inline-block;
+                margin: 4px 6px;
+            }
+            #hero {
+                flex-direction: column;
+            }
+            .hero-image, .hero-text {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            main {
+                padding: 0 12px;
+            }
+            #about, #sponsor, #testimonials, #impact-stats {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+            .progress-container {
+                gap: 8px;
+            }
+            .progress-step {
+                font-size: 11px;
+            }
+        }
+
+        /* Marketing campaign and contact form styles */
+        .marketing-plan {
+            background: #fffaf0;
+            border: 1px solid #ead9b4;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .marketing-plan h3, .marketing-plan h4 {
+            color: #004d40;
+        }
+        .marketing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .marketing-card {
+            background: #fff;
+            border-radius: 6px;
+            padding: 18px;
+            border: 1px solid #ead9b4;
+        }
+        .keyword-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 0;
+            list-style: none;
+        }
+        .keyword-list li {
+            background: #e0f2f1;
+            color: #004d40;
+            border-radius: 16px;
+            padding: 5px 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .ad-copy {
+            background: #f5f5f5;
+            border-left: 4px solid #004d40;
+            padding: 16px;
+        }
+        .ad-copy strong {
+            color: #004d40;
+        }
+        #contact {
+            background: #f0f7f5;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .contact-form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0 20px;
+        }
+        .contact-form-grid .full-width {
+            grid-column: 1 / -1;
+        }
+        #contact-form textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font: inherit;
+            resize: vertical;
+        }
+        .form-message {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .form-message.success {
+            display: block;
+            background: #dcedc8;
+            color: #285b2a;
+        }
+        .form-message.error {
+            display: block;
+            background: #ffebee;
+            color: #a32020;
+        }
+        @media (max-width: 600px) {
+            .contact-form-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-form-grid .full-width {
+                grid-column: auto;
+            }
+        }
+
+        /* Impact Stats Section */
+        #impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            background-color: #e0f2f1;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .stat-box h3 {
+            margin: 0;
+            font-size: 32px;
+            color: #004d40;
+        }
+        .stat-box p {
+            margin: 5px 0 0;
+            font-weight: bold;
+            color: #555;
+        }
+        #gallery {
+            margin-bottom: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 15px;
+        }
+        /* Testimonials Section */
+        #testimonials {
+            margin-bottom: 40px;
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #004d40;
+        }
+        .testimonial-quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #004d40;
+        }
+        #sponsor {
+            background-color: #f0f7f5;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        /* Progress Bar */
+        .progress-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .progress-step {
+            flex: 1;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #888;
+            position: relative;
+        }
+        .progress-step.active {
+            color: #004d40;
+        }
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+        }
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #004d40;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #00332c;
+        }
+        .back-btn {
+            background-color: #6c757d;
+            margin-right: 10px;
+        }
+        .back-btn:hover {
+            background-color: #5a6268;
+        }
+        .success-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .success-icon {
+            font-size: 48px;
+            color: #2e7d32;
+        }
+        /* Professional Footer */
+        footer {
+            background-color: #00251a;
+            color: #fff;
+            padding: 40px 20px 20px 20px;
+        }
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-col h4 {
+            color: #80cbc4;
+            margin-bottom: 15px;
+        }
+        .footer-col p, .footer-col ul {
+            font-size: 14px;
+            color: #ccc;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+        .footer-col a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .footer-col a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid #004d40;
+            padding-top: 20px;
+            font-size: 13px;
+            color: #aaa;
+        }
+</style>
+</head>
+<body>
+<header>
+<h1>SchoolHop Foundation</h1>
+<nav>
+<a href="#hero">Our Mission</a> |
+<a href="#about">About</a> |
+<a href="#impact-stats">Impact</a> |
+<a href="#gallery">Our Fleet & Learners</a> |
+<a href="#sponsor">Sponsor a Route</a> |
+<a href="#contact">Contact</a>
+</nav>
+</header>
+ 
+<main>
+<!-- Hero Section with Eastern Cape Kids next to a school bus -->
+<section id="hero">
+<div class="hero-text">
+<h2>Bridging the Distance to Education in the Eastern Cape</h2>
+<p>Free, safe, and reliable daily transport for rural learners living in extreme poverty.</p>
+</div>
+<div class="hero-image">
+<img src="https://th.bing.com/th/id/OIP.xXn2ZvfuU_Ud2XYc5GzjDgHaKM?w=800&h=600&c=7&r=0&o=5&pid=1.7" alt="Eastern Cape kids next to a school bus">
+</div>
+</section>
+ 
+<!-- About Section: project scope and design process -->
+<section id="about">
+<h3>About This Website</h3>
+<p>This website presents the SchoolHop Foundation's mission, impact, community stories, and sponsorship opportunities through a clear, accessible, and user-focused digital experience.</p>
+<div class="project-requirements">
+<div class="requirement-card">
+<h4>Website Wireframes</h4>
+<p>Plan the structure and content flow for the Home, About, Services, and Contact pages before development.</p>
+</div>
+<div class="requirement-card">
+<h4>Visual Style Guide</h4>
+<p>Use a consistent colour palette, typography, spacing, imagery, buttons, and content hierarchy across the website.</p>
+</div>
+<div class="requirement-card">
+<h4>Core Website Pages</h4>
+<p>Build clear Home, About, Products or Services, and Contact pages that support the organisation's communication goals.</p>
+</div>
+<div class="requirement-card">
+<h4>Responsive Design</h4>
+<p>Design and test the website for desktop, tablet, and mobile devices to provide a consistent experience on every screen size.</p>
+</div>
+<div class="requirement-card">
+<h4>Clear Call to Action</h4>
+<p>Guide visitors toward meaningful action, such as sponsoring a route, supporting a learner, or contacting the foundation.</p>
+</div>
+<div class="requirement-card">
+<h4>UX/UI Peer Review</h4>
+<p>Conduct a peer review to assess usability, visual consistency, accessibility, navigation, and the overall user experience.</p>
+</div>
+</div>
+<div class="cta-panel">
+<strong>Help bridge the distance to education.</strong>
+<br>
+<a href="#sponsor">Become a Sponsor</a>
+</div>
+</section>
+
+<!-- Impact Stats Section -->
+<section id="impact-stats">
+<div class="stat-box">
+<h3>1,250+</h3>
+<p>Children Transported Daily</p>
+</div>
+<div class="stat-box">
+<h3>15</h3>
+<p>Active Village Routes</p>
+</div>
+<div class="stat-box">
+<h3>98%</h3>
+<p>Student Attendance Rate</p>
+</div>
+</section>
+ 
+<!-- Fleet / Learners Gallery -->
+<section id="gallery">
+<h3>Our Fleet & Rural Learners</h3>
+<div class="grid">
+<div class="card">
+<img src="https://th.bing.com/th/id/OIP.ST2DuqWy_hwjIUqOiu0tFQHaFj?w=600&h=500&c=7&r=0&o=5&pid=1.7" alt="School bus in the Eastern Cape ground">
+<div class="card-content">
+<h4>Bus on Eastern Cape Terrain</h4>
+<p>Navigating rough rural dirt roads to ensure children reach their classrooms safely every single day.</p>
+</div>
+</div>
+<div class="card">
+<img src="https://trucksmag.co.za/wp-content/uploads/2019/02/heatherbank-bus-handover_1800x1800-1024x683.jpg" alt="Sponsors with Eastern Cape kids">
+<div class="card-content">
+<h4>Sponsors Engaging with Communities</h4>
+<p>Philanthropic partners visiting our routes and meeting local Eastern Cape learners and educators.</p>
+</div>
+</div>
+</div>
+</section>
+ 
+<!-- Testimonial Section -->
+<section id="testimonials">
+<h3>Voices from the Community</h3>
+<p class="testimonial-quote">"Before SchoolHop, our children had to walk over 10 kilometers through unsafe terrain just to reach school. Now, they arrive safely, with energy left to focus on their education."</p>
+<p class="testimonial-author">— Mr. Z. Mthethwa, Rural School Principal, Eastern Cape</p>
+</section>
+ 
+<!-- Digital Marketing Campaign Plan -->
+<section id="marketing-plan" class="marketing-plan">
+<h3>Digital Marketing Campaign Plan</h3>
+<p><strong>Landing-page copy:</strong> Every learner deserves a safe journey to school. SchoolHop Foundation provides free, reliable transport for children in rural Eastern Cape communities, helping them arrive safely, attend consistently, and focus on their education. Support a learner or sponsor an entire village route today.</p>
+<div class="marketing-grid">
+<div class="marketing-card">
+<h4>Keyword Research</h4>
+<p>Primary and supporting search terms identified for the campaign:</p>
+<ul class="keyword-list">
+<li>rural school transport Eastern Cape</li>
+<li>sponsor a learner South Africa</li>
+<li>school transport NGO</li>
+<li>education charity Eastern Cape</li>
+<li>safe learner transport</li>
+<li>donate to rural schools</li>
+</ul>
+</div>
+<div class="marketing-card">
+<h4>SMART Campaign Objective</h4>
+<p><strong>Specific:</strong> Generate qualified sponsorship and partnership leads for rural learner transport.</p>
+<p><strong>Measurable:</strong> Receive 30 completed lead forms.</p>
+<p><strong>Achievable:</strong> Use targeted search keywords, a focused landing page, and clear calls to action.</p>
+<p><strong>Relevant:</strong> Increase funding for safe school transport in underserved communities.</p>
+<p><strong>Time-bound:</strong> Achieve the target within 90 days of campaign launch.</p>
+</div>
+<div class="marketing-card">
+<h4>Proposed Search Advertisement</h4>
+<div class="ad-copy">
+<strong>Headline 1:</strong> Sponsor Safe School Transport<br>
+<strong>Headline 2:</strong> Help Eastern Cape Learners<br>
+<strong>Headline 3:</strong> SchoolHop Foundation<br><br>
+<strong>Description:</strong> Help rural learners reach school safely every day. Sponsor a student or village route and support access to education. Get involved today.
+</div>
+</div>
+</div>
+</section>
+
+<!-- Contact / Lead-Generation Form -->
+<section id="contact">
+<h3>Contact SchoolHop Foundation</h3>
+<p>Interested in sponsoring a learner, supporting a route, or partnering with us? Complete the form and our team will respond to your enquiry.</p>
+<form id="contact-form" novalidate>
+<div class="contact-form-grid">
+<div>
+<label for="lead-name">Full Name:</label>
+<input type="text" id="lead-name" name="name" required placeholder="Enter your full name">
+</div>
+<div>
+<label for="lead-email">Email Address:</label>
+<input type="email" id="lead-email" name="email" required placeholder="name@example.com">
+</div>
+<div>
+<label for="lead-phone">Phone Number:</label>
+<input type="tel" id="lead-phone" name="phone" placeholder="+27 82 123 4567">
+</div>
+<div>
+<label for="lead-interest">How can you help?</label>
+<select id="lead-interest" name="interest" required>
+<option value="">Select an option</option>
+<option> sponsor a learner</option>
+<option> sponsor a village route</option>
+<option> corporate partnership</option>
+<option> volunteer or community support</option>
+</select>
+</div>
+<div class="full-width">
+<label for="lead-message">Message:</label>
+<textarea id="lead-message" name="message" required placeholder="Tell us how you would like to get involved"></textarea>
+</div>
+</div>
+<button type="submit">Send Enquiry</button>
+<div id="contact-status" class="form-message" role="status" aria-live="polite"></div>
+</form>
+</section>
+
+<!-- Dynamic Multi-Step Sponsor Section -->
+<section id="sponsor">
+<!-- Progress Bar -->
+<div class="progress-container">
+<div id="prog-step-1" class="progress-step active">1. Choose Tier</div>
+<div id="prog-step-2" class="progress-step">2. Your Details</div>
+<div id="prog-step-3" class="progress-step">3. Confirmation</div>
+</div>
+ 
+<!-- Step 1: Initial Interest Form -->
+<div id="step-1" class="form-step active">
+<h3>Become a Corporate or Philanthropic Sponsor</h3>
+<form id="initial-form" onsubmit="goToStep2(event)">
+<label for="sponsor-name">Organization / Funder Name:</label>
+<input type="text" id="sponsor-name" required placeholder="Enter your company or organization name">
+ 
+<label for="tier">Select Funding Tier:</label>
+<select id="tier">
+<option value="Sponsor 1 Student (R500 / month)">Sponsor 1 Student (R500 / month)</option>
+<option value="Sponsor an Entire Village Route (R15,000 / month)">Sponsor an Entire Village Route (R15,000 / month)</option>
+</select>
+ 
+<button type="submit">Partner With Us</button>
+</form>
+</div>
+ 
+<!-- Step 2: Detailed Partnership Form -->
+<div id="step-2" class="form-step">
+<h3>Complete Your Partnership Details</h3>
+<p>Thank you, <strong id="display-org-name"></strong>! Please provide contact details to finalize your sponsorship.</p>
+<form id="details-form" onsubmit="goToStep3(event)">
+<label for="contact-person">Contact Person Name:</label>
+<input type="text" id="contact-person" required placeholder="Full Name">
+ 
+<label for="email">Email Address:</label>
+<input type="email" id="email" required placeholder="name@company.com">
+ 
+<label for="phone">Phone Number:</label>
+<input type="tel" id="phone" required placeholder="+27 82 123 4567">
+ 
+<button type="button" class="back-btn" onclick="goToStep1()">Back</button>
+<button type="submit">Confirm Partnership</button>
+</form>
+</div>
+ 
+<!-- Step 3: Success Screen -->
+<div id="step-3" class="form-step">
+<div class="success-card">
+<div class="success-icon">✓</div>
+<h2>Partnership Successful!</h2>
+<p>Thank you, <strong id="final-org-name"></strong>, for partnering with the SchoolHop Foundation.</p>
+<p>We have sent a confirmation email to <strong id="final-email"></strong> with further details regarding your route sponsorship in the Eastern Cape.</p>
+</div>
+</div>
+</section>
+</main>
+ 
+<footer>
+<div class="footer-content">
+<div class="footer-col">
+<h4>SchoolHop Foundation</h4>
+<p>Dedicated to breaking barriers to education by providing free, safe, and reliable rural school transport in South Africa.</p>
+</div>
+<div class="footer-col">
+<h4>Contact Us</h4>
+<p>Email: info@schoolhop.org.za</p>
+<p>Phone: +27 41 555 0192</p>
+<p>Eastern Cape, South Africa</p>
+</div>
+<div class="footer-col">
+<h4>Legal & Compliance</h4>
+<ul>
+<li>Registered Non-Profit Organisation (NPO)</li>
+<li>Section 18A Tax Exemption Status</li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2026 SchoolHop Foundation. All rights reserved.</p>
+</div>
+</footer>
+ 
+<script>
+        // Contact lead-generation form: validates input and confirms the enquiry locally.
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const form = event.currentTarget;
+            const status = document.getElementById('contact-status');
+            const name = document.getElementById('lead-name').value.trim();
+            const email = document.getElementById('lead-email').value.trim();
+            const interest = document.getElementById('lead-interest').value;
+            const message = document.getElementById('lead-message').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            status.className = 'form-message';
+            if (!name || !emailPattern.test(email) || !interest || !message) {
+                status.textContent = 'Please complete all required fields with a valid email address.';
+                status.classList.add('error');
+                return;
+            }
+
+            status.textContent = `Thank you, ${name}. Your enquiry has been received. The SchoolHop team will contact you shortly.`;
+            status.classList.add('success');
+            form.reset();
+        });
+
+        let orgName = '';
+ 
+        function goToStep2(event) {
+            event.preventDefault();
+            orgName = document.getElementById('sponsor-name').value;
+            document.getElementById('display-org-name').innerText = orgName;
+ 
+            document.getElementById('step-1').classList.remove('active');
+            document.getElementById('step-2').classList.add('active');
+ 
+            document.getElementById('prog-step-1').classList.remove('active');
+            document.getElementById('prog-step-2').classList.add('active');
+        }
+ 
+        function goToStep1() {
+            document.getElementById('step-2').classList.remove('active');
+            document.getElementById('step-1').classList.add('active');
+ 
+            document.getElementById('prog-step-2').classList.remove('active');
+            document.getElementById('prog-step-1').classList.add('active');
+        }
+ 
+        function goToStep3(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+ 
+            document.getElementById('final-org-name').innerText = orgName;
+            document.getElementById('final-email').innerText = email;
+ 
+            document.getElementById('step-2').classList.remove('active');
+            document.getElementById('step-3').classList.add('active');
+ 
+            document.getElementById('prog-step-2').classList.remove('active');
+            document.getElementById('prog-step-3').classList.add('active');
+        }
+</script>
+</body>
+</html>
